@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://use.typekit.net/ogy5tna.css");
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px #F7F3F510;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F7F3F5;
+    transition: 0.3s;
+}
+
+::selection {
+    color: #F7F3F5;
+    background: #F7F3F550;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    cursor: none;
+}
+
+body {
+    background-color: #0B0D0C;
+    color: #F7F3F5;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-image: repeating-linear-gradient(
+        to right,
+        #F7F3F520 0px,
+        #F7F3F520 1px,
+        transparent 1px,
+        transparent 160px
+    );
+    z-index: -1;
+}
+
+/* - - - Light mode - - - */
+
+body.lightMode {
+    background-color: #F7F3F5;
+    color: #0B0D0C;
+}
+
+body.lightMode ::selection {
+    color: #F7F3F5;
+    background: #0B0D0C50;
+}
+
+body.lightMode header h1 #desc{
+    color: #0B0D0C;
+}
+
+body.lightMode header,
+body.lightMode nav,
+body.lightMode #social {
+    border-color: #0B0D0C20;
+}
+
+body.lightMode nav ul li a,
+body.lightMode #social ul button,
+body.lightMode #social ul li a {
+    color: #0B0D0C;
+}
+
+body.lightMode nav ul li a:hover,
+body.lightMode #social ul button:hover,
+body.lightMode #social ul li a:hover {
+    color: #9DFF00;
+}
+
+/* - - - - - - header - - - - - - */
+
+header{
+    height: 100vh;
+    width: 100%;
+
+}
+
+header h1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 #name {
+    user-select: none;
+    font-family: "thermal-variable", sans-serif;
+    font-variation-settings: "opsz" 100, "wght" 100;
+    color: #9DFF00;
+    font-size: clamp(8rem, 10vw, 16rem);
+}
+
+header h1 #desc {
+    font-size: clamp(1rem, 1.25vw, 2rem);
+    letter-spacing: 8px;
+    font-family: "thermal-variable", sans-serif;
+    font-variation-settings: "opsz" 100, "wght" 100;
+    color: #F7F3F5;
+    user-select: none;
+}
+
+header #goProjets {
+    color: #9DFF00;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+header #goProjets a:visited {
+    color: #9DFF00;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+#goProjets a i {
+    animation: bounce 2s infinite;
+}
+
+header nav {
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    border-right: solid 1px #F7F3F520;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: inherit;
+    flex-direction: column;
+}
+
+nav ul li {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 0.8rem;
+    color: #F7F3F5;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #9DFF00;
+}
+
+/* - - - social - - - */
+
+#social {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px 80px;
+    width: 100%;
+    height: 80px;
+    border-bottom: solid 1px #F7F3F520;
+    z-index: 1;
+}
+
+#social ul {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#social ul li button {
+    border: none;
+    background: none;
+    color: #F7F3F5;
+}
+
+#social ul li a {
+    color: #F7F3F5;
+    transition: all 0.2s ease-in-out;
+}
+
+#social ul li a:hover {
+    color: #9DFF00;
+}
+
+#social ul button:hover {
+    color: #9DFF00;
+}
+
+#social ul li a i {
+    width: 16px;
+    height: 16px;
+}
+
+/* - - - - - - Main - - - - - - */
+
+main {
+    min-height: 100vh;
+}
+
+#goTop {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    color: #9DFF00;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#goTop i {
+    font-size: 2rem;
+}
+
+/* - - - - - - Cursor - - - - - - */
+
+.inner_cursor{
+	position: fixed;
+	left: 8px;
+	height: 8px;
+	width: 8px;
+	transform: translate(-50%, -50%);
+	background: #FBFFE6;
+	mix-blend-mode: difference;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: width 0.4s, height 0.4s;
+	z-index: 1000;
+}
+
+.inner_cursor.grow{
+	width: 32px;
+	height: 32px;
+	transition: width 0.4s, height 0.4s;
+}
+
+.outer_cursor{
+	position: fixed;
+	left: 8px;
+	width: 32px;
+	height: 32px;
+	transform: translate(-50%, -50%);
+	border: 1px solid #FBFFE6;
+	mix-blend-mode: difference;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: 0.04s;
+}
