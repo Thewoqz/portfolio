@@ -99,7 +99,7 @@ header{
 
 header #me {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -264,6 +264,7 @@ main #about a{
     color: #0B0D0C;
     background-color: #9DFF00;
     padding: 12px 24px;
+    text-align: center;
 }
 
 main #projets{
@@ -296,7 +297,6 @@ footer{
     align-items: center;
     justify-content: center;
     border-top: solid 1px #F7F3F520;
-    
     background-image: repeating-linear-gradient(
         to right,
         #F7F3F520 0px,
@@ -305,6 +305,7 @@ footer{
         transparent 160px
     );
 }
+
 
 /* - - - - - - Cursor - - - - - - */
 
@@ -339,4 +340,32 @@ footer{
 	border-radius: 50%;
 	pointer-events: none;
 	transition: 0.04s;
+}
+
+/* - - - - - - Responsive - - - - - - */
+
+@media screen and (max-width:768px){
+    header #me{
+        margin-left: 80px;
+    }
+
+    header #me h1{
+        font-size: clamp(4rem, 5vw, 8rem)
+    }
+
+    header #discover{
+        margin-left: 80px;
+    }
+
+    #social ul{
+        width: 50%;
+    }
+
+    main{
+        margin-left: 80px;
+    }
+
+    main #about p{
+        width: 100%;
+    }
 }
