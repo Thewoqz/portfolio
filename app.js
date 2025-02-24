@@ -131,23 +131,4 @@ document.getElementById("toggleTheme").addEventListener("click", function(){
             transparent 160px
         )`;
     }
-
-    for (let sheet of styleSheets) {
-        for (let i = 0; i < sheet.cssRules.length; i++) {
-            let rule = sheet.cssRules[i];
-            if (rule.style) {
-                if (rule.style.color === "rgb(247, 243, 245)") {
-                    rule.style.color = "#0B0D0C";
-                } else if (rule.style.color === "rgb(11, 13, 12)") {
-                    rule.style.color = "#F7F3F5";
-                }
-
-                if (rule.style.backgroundColor === "rgb(247, 243, 245)") {
-                    rule.style.backgroundColor = "#0B0D0C";
-                } else if (rule.style.backgroundColor === "rgb(11, 13, 12)") {
-                    rule.style.backgroundColor = "#F7F3F5";
-                }
-            }
-        }
-    }
 });
