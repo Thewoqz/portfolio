@@ -3,7 +3,7 @@ document.addEventListener('scroll', function(){
     const nameSpan = document.getElementById('name');
     const descSpan = document.getElementById('desc');
 
-    nameSpan.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+    nameSpan.style.transform = `translateY(${scrollPosition * 0.3}px)`;
     descSpan.style.transform = `translateY(${scrollPosition * 0.4}px)`;
 });
 

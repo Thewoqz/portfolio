@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url("https://use.typekit.net/ogy5tna.css");
 
+
+@font-face{
+    font-family: "Font Awesome 6 Free";
+    src: "fonts/fa-solid-900.woff2";
+} 
+
+@font-face{
+    font-family: "Font Awesome 6 Brands";
+    src: "fonts/fa-brands-400.woff2";
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
