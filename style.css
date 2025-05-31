@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url("https://use.typekit.net/ogy5tna.css");
-
-
 @font-face{
     font-family: "Font Awesome 6 Free";
     src: "fonts/fa-solid-900.woff2";
@@ -10,6 +6,16 @@
 @font-face{
     font-family: "Font Awesome 6 Brands";
     src: "fonts/fa-brands-400.woff2";
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("fonts/SourceCodePro.ttf");
+}
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("fonts/CormorantGaramond.ttf");
 }
 
 ::-webkit-scrollbar {
@@ -34,7 +40,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Source Code Pro', sans-serif;
+    font-family: 'Source Code Pro';
     list-style-type: none;
     text-decoration: none;
     scroll-behavior: smooth;
@@ -45,7 +51,6 @@
 body {
     background-color: #0B0D0C;
     color: #F7F3F5;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 body::before {
@@ -120,8 +125,8 @@ header #me {
 
 header #me h1 {
     user-select: none;
-    font-family: "thermal-variable", sans-serif;
-    font-variation-settings: "opsz" 100, "wght" 100;
+    font-family: "Cormorant Garamond";
+    font-weight: 100;
     color: #9DFF00;
     font-size: clamp(8rem, 10vw, 16rem);
 }
@@ -129,8 +134,8 @@ header #me h1 {
 header #me h2 {
     font-size: clamp(1rem, 1.25vw, 2rem);
     letter-spacing: 8px;
-    font-family: "thermal-variable", sans-serif;
-    font-variation-settings: "opsz" 100, "wght" 100;
+    font-family: "Cormorant Garamond";
+    font-weight: 100;
     color: #F7F3F5;
     user-select: none;
 }
