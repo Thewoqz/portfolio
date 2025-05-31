@@ -371,6 +371,10 @@ main #projets #carousel .arrow{
     border-radius: 50%;
 }
 
+main #projets #carousel .arrow.left, main #projets #carousel .arrow.right {
+    rotate: 90deg;
+}
+
 main #projets #carousel #dots {
     display: flex;
     justify-content: center;
