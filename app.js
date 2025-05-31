@@ -132,3 +132,49 @@ document.getElementById("toggleTheme").addEventListener("click", function(){
         )`;
     }
 });
+
+const dots = document.querySelectorAll('.dot');
+const projets = document.querySelectorAll('.projet');
+
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        const index = parseInt(dot.getAttribute('data-index'));
+
+        projets.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+
+        projets[index].classList.add('active');
+        dots[index].classList.add('active');
+    });
+});
+
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+let currentIndex = 0;
+
+function updateCarousel(index) {
+    projets.forEach(p => p.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+
+    projets[index].classList.add('active');
+    dots[index].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + projets.length) % projets.length;
+    updateCarousel(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % projets.length;
+    updateCarousel(currentIndex);
+});
+
+// Synchroniser les dots
+dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.getAttribute('data-index'));
+        updateCarousel(currentIndex);
+    });
+});

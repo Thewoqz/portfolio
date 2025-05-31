@@ -8,34 +8,31 @@
 		<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="thewoqz, portfolio, graphiste, designer web, développeur frontend, tournai, mons, design web, graphisme, identités visuelles, illustrations, mises en page, design d’interfaces UI/UX, maquettes, sites web, animation, motion design">
-
 		<!-- Google analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-LSCPZ9G5ZZ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-
 			gtag('config', 'G-LSCPZ9G5ZZ');
 		</script>
-
 		<!-- Facebook Meta Tags -->
 		<meta property="og:url" content="https://thewoqz.github.io/portfolio">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Thewoqz | Développeur frontend | Graphiste | designer web">
 		<meta property="og:description" content="Portfolio de Thewoqz, développeur frontend, graphiste, designer web et bien plus.">
-		<meta property="og:image" content="https://thewoqz.github.io/portfolio/img/og_img.png">
+		<meta property="og:image" content="https://thewoqz.github.io/portfolio/img/og_img.webp">
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="twitter:domain" content="thewoqz.github.io">
 		<meta property="twitter:url" content="https://thewoqz.github.io/portfolio">
 		<meta name="twitter:title" content="Thewoqz | Développeur frontend | Graphiste | designer web">
-		<meta name="twitter:description" content="https://thewoqz.github.io/portfolio/img/og_img.png">
-		
+		<meta name="twitter:description" content="https://thewoqz.github.io/portfolio/img/og_img.webp">
+		<!-- Style Sheet -->
         <link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="all.min.css">
-
-        <title>Thewoqz | Développeur frontend | Graphiste | designer web</title>
+		<!-- Title -->
+        <title>Thewoqz | Développeur frontend | Graphiste | designeur web</title>
     </head>
     <body>
         <header>
@@ -59,21 +56,39 @@
 				<h2 id="desc">Portfolio</h2>
 				<h1 id="name">Thewoqz</h1>
 			</div>
-			<div id="discover">
-				<a href="#about" aria-label="presentation"><i class="fa-solid fa-angles-down"></i></a>
+			<div id="discover">	
+				<a href="#about" aria-label="presentation"><i class="fa-solid fa-chevron-down"></i></a>
 			</div>
 		</header>
 		<main>
-			<div id="about">
-				<p>Moi, c'est Thewoqz ! Étudiant en <strong>Techniques Graphiques</strong>, je suis actif dans le secteur de <strong>Tournai</strong> et <strong>Mons</strong>. Je suis spécialisé dans le <strong>design web</strong>, le <strong>développement frontend</strong> mais aussi dans le  <strong>graphisme</strong> au sens large. Passionné par la <strong>création digitale</strong>, j’utilise des outils comme <strong>Photoshop</strong>, <strong>Illustrator</strong> et <strong>InDesign</strong> pour la conception d’<strong>identités visuelles</strong>, d’<strong>illustrations</strong> et de <strong>mises en page</strong>. Pour le <strong>design d’interfaces UI/UX</strong> et la création de <strong>maquettes interactives</strong>, je travaille avec <strong>Adobe XD</strong> afin d’assurer une expérience utilisateur optimale au sein de mes projets. En tant que <strong>développeeur frontend</strong>, je façonne mes <strong>sites web</strong> en utilisant <strong>Visual Studio Code</strong> avec des technologies comme <strong>HTML</strong>, <strong>CSS</strong> ou encore <strong>JavaScript</strong>. Je touche également à l’<strong>animation</strong> et le <strong>motion design</strong> grâce à <strong>After Effects</strong>, afin d’apporter une dimension supplémentaire à mes projets.</p>
-
-				<a href="#projets">Découvrir mon travail</a>
-			</div>
-			<div id="projets">
-				<p>Carrousel ici...</p>
-			</div>
+			<section id="about">
+				<p>Moi, c'est Thewoqz ! Étudiant en <strong>Techniques Graphiques</strong>, je suis actif dans le secteur de <strong>Tournai</strong> et <strong>Mons</strong>. Je suis spécialisé dans le <strong>design web</strong>, le <strong>développement frontend</strong> mais aussi dans le  <strong>graphisme</strong> au sens large. Passionné par la <strong>création digitale</strong>, j’utilise des outils comme <strong>Photoshop</strong>, <strong>Illustrator</strong> et <strong>InDesign</strong> pour la conception d’<strong>identités visuelles</strong>, d’<strong>illustrations</strong> et de <strong>mises en page</strong>. Pour le <strong>design d’interfaces UI/UX</strong> et la création de <strong>maquettes interactives</strong>, je travaille avec <strong>Adobe XD</strong> afin d’assurer une expérience utilisateur optimale au sein de mes projets. En tant que <strong>développeur frontend</strong>, je façonne mes <strong>sites web</strong> en utilisant <strong>Visual Studio Code</strong> avec des technologies comme <strong>HTML</strong>, <strong>CSS</strong> ou encore <strong>JavaScript</strong>. Je touche également à l’<strong>animation</strong> et au <strong>motion design</strong> à l'aide d'<strong>After Effects</strong> afin d’apporter une dimension supplémentaire à mes projets.</p>
+			<a href="#projets">Découvrir mon travail</a>
+			</section>
+			<section id="projets">
+				<div id="carousel">
+					<div id="content">
+						<a href="https://www.behance.net/gallery/212887241/DIOLE-Charte-Graphique" target="blank" class="projet p1 active"></a>
+						<a href="https://www.behance.net/gallery/195857943/TANUKI-Le-bestiaire-fantastique" target="blank" class="projet p2"></a>
+						<a href="https://www.behance.net/gallery/214169795/MONS-TABACS-Charte-graphique" target="blank" class="projet p3"></a>
+						<a href="https://www.behance.net/gallery/210791429/THEWOQZ-Mon-propre-logo" target="blank" class="projet p4"></a>
+						<a href="https://www.behance.net/gallery/224351005/WES-ANDERSON-Lexposition" target="blank" class="projet p5"></a>
+					</div>
+					<div id="movements">
+						<button class="arrow left" id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+						<div id="dots">
+							<button class="dot active" data-index="0"></button>
+							<button class="dot" data-index="1"></button>
+							<button class="dot" data-index="2"></button>
+							<button class="dot" data-index="3"></button>
+							<button class="dot" data-index="4"></button>
+						</div>
+						<button class="arrow right" id="next"><i class="fa-solid fa-chevron-right"></i></button>
+					</div>
+				</div>
+			</section>
+			<a href="#" id="goTop" aria-label="go to top of the page"><i class="fa-solid fa-chevron-up"></i></a>
 		</main>
-		<a href="#" id="goTop" aria-label="go to top of the page"><i class="fa-solid fa-circle-chevron-up"></i></a>
 		<footer>
 			<p>Copyright © 2025 - Thewoqz</p>
 		</footer>

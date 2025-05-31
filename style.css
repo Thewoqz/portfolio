@@ -39,6 +39,7 @@
     text-decoration: none;
     scroll-behavior: smooth;
     cursor: none;
+    overflow-x: hidden;
 }
 
 body {
@@ -99,7 +100,6 @@ body.lightMode #social ul li a:hover {
     color: #9DFF00;
 }
 
-
 /* - - - - - - header - - - - - - */
 
 header{
@@ -147,6 +147,9 @@ header #discover {
 }
 
 header #discover a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     color: #F7F3F5;
 }
 
@@ -193,7 +196,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #F7F3F5;
     transition: all 0.2s ease-in-out;
 }
@@ -215,6 +218,7 @@ nav ul li a:hover {
     height: 80px;
     border-bottom: solid 1px #F7F3F520;
     z-index: 1;
+    overflow: hidden;
 }
 
 #social ul {
@@ -226,12 +230,18 @@ nav ul li a:hover {
 }
 
 #social ul li button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background: none;
     color: #F7F3F5;
 }
 
 #social ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #F7F3F5;
     transition: all 0.2s ease-in-out;
 }
@@ -245,6 +255,9 @@ nav ul li a:hover {
 }
 
 #social ul li a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 16px;
     height: 16px;
 }
@@ -256,7 +269,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 main #about{
@@ -280,36 +293,128 @@ main #about a{
 }
 
 main #projets{
+    width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
+main #projets #carousel {
+    width: 50vw;
+}
+
+main #projets #carousel #content {
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+main #projets #carousel #content .projet {
+    display: none;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+main #projets #carousel #content .projet:hover{
+    transform: scale(1.05);
+}
+
+main #projets #carousel #content .projet.p1 {
+    background-image: url("img/projet_1.webp");
+}
+
+main #projets #carousel #content .projet.p2 {
+    background-image: url("img/projet_2.webp");
+}
+
+main #projets #carousel #content .projet.p3 {
+    background-image: url("img/projet_3.webp");
+}
+
+main #projets #carousel #content .projet.p4 {
+    background-image: url("img/projet_4.webp");
+}
+
+main #projets #carousel #content .projet.p5 {
+    background-image: url("img/projet_5.webp");
+}
+
+
+main #projets #carousel #content .projet.active {
+    display: block;
+}
+
+main #projets #carousel #movements{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main #projets #carousel .arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FBFFE6;
+    mix-blend-mode: difference;
+    border: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+
+main #projets #carousel #dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    height: 2.4rem;
+    padding: 0 1.2rem;
+    background: #FBFFE6;
+    mix-blend-mode: difference;
+    margin: 0 1.2rem;
+    border-radius: 1.2rem;
+}
+
+main #projets #carousel #dots .dot {
+    width: 8px;
+    height: 8px;
+    background: #FBFFE650;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    border: none;
+}
+
+main #projets #carousel #dots .dot.active {
+    background: #FBFFE6;
+}
+
+
 #goTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     bottom: 40px;
     right: 40px;
-    color: #9DFF00;
+    color: #0B0D0C;
+    background-color: #9DFF00;
     border: none;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 40px;
-    cursor: pointer;
     z-index: 999;
-}
-
-#goTop i {
-    font-size: 2rem;
 }
 
 /* - - - - - - Footer - - - - - - */
 
 footer{
-    font-size: 0.8rem;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: solid 1px #F7F3F520;
+    font-size: 1rem;
+    padding-top: 80px;
+    overflow: hidden;
     background-image: repeating-linear-gradient(
         to right,
         #F7F3F520 0px,
@@ -319,6 +424,14 @@ footer{
     );
 }
 
+footer p{
+    border-top: solid 1px #F7F3F520;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    font-size: 1rem;
+}
 
 /* - - - - - - Cursor - - - - - - */
 
@@ -359,8 +472,17 @@ footer{
 
 @media screen and (max-width:768px){
 
-    body{
-        font-size: 0.8rem;
+    *{
+        cursor: default;
+    }
+
+    body p{
+        font-size: 1rem;
+    }
+
+    
+    body::before {
+        height: 250vh;
     }
 
     #social{
@@ -373,7 +495,7 @@ footer{
     }
 
     nav ul li a{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
     
     header #me h1{
@@ -390,11 +512,58 @@ footer{
     }
 
     main{
-        margin-left: 20px;
+        font-size: 0.8rem;
+        margin: 0 40px;
+    }
+
+    main #about p{
+        width: 100%;
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+
+    main #projets{
+        min-height: 50vh;
+    }
+
+
+    main #projets #carousel {
+        width: 100vw;
+    }
+
+    main #projets #carousel #content .projet{
+        height: 360px;
+    }
+
+    main #projets #carousel .arrow{
+        width: 1.8rem;
+        height: 1.8rem;
+
+    }
+
+    main #projets #carousel #dots {
+        gap: 1.2rem;
+        height: 1.8rem;
+        padding: 0 1.2rem;
+        background: #FBFFE6;
+        mix-blend-mode: difference;
+        margin: 0 0.6rem;
+        border-radius: 1.2rem;
+    }
+
+    footer p{
+        font-size: 0.8rem;
+    }
+
+    #goTop{
+        bottom: 20px;
+        right: 20px;
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
     #goTop i{
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
     .inner_cursor,
     .outer_cursor{
